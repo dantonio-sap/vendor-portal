@@ -1,0 +1,35 @@
+{
+  "auth": {
+    "passport": {
+      "strategy": "mock",
+      "users": {
+        "alice": {
+          "password": "alice",
+          "roles": ["user"],
+          "userAttributes": {
+            "vendor": "petsmart"
+          }
+        },
+        "dan": {
+          "password": "dan",
+          "roles": ["admin", "user"],
+          "userAttributes": {
+            "vendor": "sap"
+          }
+        }
+      }
+    }
+  },
+  "requires": {
+    "uaa": {
+      "kind": "xsuaa"
+    },
+    "db": {
+      "kind": "sqlite",
+      "model": "*",
+      "credentials": {
+        "database": "db/sqlite.db"
+      }
+    }
+  }
+}
