@@ -7,14 +7,14 @@
           "password": "alice",
           "roles": ["user"],
           "userAttributes": {
-            "vendor": "petsmart"
+            "vendor": "PS"
           }
         },
         "dan": {
           "password": "dan",
           "roles": ["admin", "user"],
           "userAttributes": {
-            "vendor": "sap"
+            "vendor": "SAP"
           }
         }
       }
@@ -29,6 +29,10 @@
       "model": "*",
       "credentials": {
         "database": "db/sqlite.db"
+      },
+      "[production]": {
+        "kind": "hana",
+        "model": ["db/", "srv/vendor-service.cds"]
       }
     }
   }

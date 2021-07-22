@@ -1,7 +1,7 @@
 {
   "_version": "1.31.0",
   "sap.app": {
-    "id": "my.vendor.orders.orders",
+    "id": "my.vendor.vendors.vendors",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -73,41 +73,41 @@
       "routes": [
         {
           "pattern": ":?query:",
-          "name": "OrdersList",
-          "target": "OrdersList"
+          "name": "VendorsList",
+          "target": "VendorsList"
         },
         {
-          "pattern": "Orders({key}):?query:",
-          "name": "OrdersObjectPage",
-          "target": "OrdersObjectPage"
+          "pattern": "Vendors({key}):?query:",
+          "name": "VendorsObjectPage",
+          "target": "VendorsObjectPage"
         }
       ],
       "targets": {
-        "OrdersList": {
+        "VendorsList": {
           "type": "Component",
-          "id": "OrdersList",
+          "id": "VendorsList",
           "name": "sap.fe.templates.ListReport",
           "options": {
             "settings": {
-              "entitySet": "Orders",
+              "entitySet": "Vendors",
               "variantManagement": "None",
               "navigation": {
-                "Orders": {
+                "Vendors": {
                   "detail": {
-                    "route": "OrdersObjectPage"
+                    "route": "VendorsObjectPage"
                   }
                 }
               }
             }
           }
         },
-        "OrdersObjectPage": {
+        "VendorsObjectPage": {
           "type": "Component",
-          "id": "OrdersObjectPage",
+          "id": "VendorsObjectPage",
           "name": "sap.fe.templates.ObjectPage",
           "options": {
             "settings": {
-              "entitySet": "Orders"
+              "entitySet": "Vendors"
             }
           }
         }
